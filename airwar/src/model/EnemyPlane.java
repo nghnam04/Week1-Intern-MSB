@@ -55,7 +55,10 @@ public class EnemyPlane extends Plane {
     }
 
     public void shoot(Vector<Bullet> listBullet){
-        Bullet bullet = new Bullet(positionX, positionY, 0, 3, "Resources/enemy_bullet.png");
-        listBullet.add(bullet);
+        int numberOfBullets = 11 - this.hearts;
+        for (int i = 0; i < numberOfBullets; i++) {
+            int newSpeedX = i - (numberOfBullets / 2);
+            listBullet.add(new Bullet(positionX, positionY, newSpeedX, 3, "Resources/enemy_bullet.png"));
+        }
     }
 }
