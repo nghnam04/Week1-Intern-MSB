@@ -30,7 +30,7 @@ public class PlayerPlane extends Plane {
     protected void drawHearts(Graphics graphics){
         Image heartImg = null;
         int positionX = 350;
-        int positionY = 3;
+        int positionY = 30;
         try {
             heartImg = ImageIO.read(new File("Resources/heart.png"));
         } catch (IOException e) {
